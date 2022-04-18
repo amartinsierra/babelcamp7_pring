@@ -25,4 +25,11 @@ public class BuscadorServiceImpl implements BuscadorService {
 				.filter(p->p.getTematica().equals(tematica))
 				.collect(Collectors.toList());
 	}
+	@Override
+	public void alta(Pagina pagina) {
+		paginas.add(pagina);
+		
+	}
+	
+	
 }

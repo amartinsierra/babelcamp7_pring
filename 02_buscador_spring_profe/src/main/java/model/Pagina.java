@@ -10,6 +10,9 @@ public class Pagina {
 		this.tematica = tematica;
 		this.descripcion = descripcion;
 	}
+	public Pagina() {
+		
+	}
 	public String getDireccion() {
 		return direccion;
 	}
