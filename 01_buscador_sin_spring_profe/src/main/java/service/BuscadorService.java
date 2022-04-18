@@ -2,6 +2,7 @@ package service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import model.Pagina;
 
@@ -19,14 +20,21 @@ public class BuscadorService {
 	public List<Pagina> buscar(String tematica){
 		//en este arraylist auxiliar guardamos las páginas
 		//cuya temática coincida con la recibida como parámetro
-		List<Pagina> auxiliar=new ArrayList<>();
+		/*List<Pagina> auxiliar=new ArrayList<>();
 		for(int i=0;i<paginas.size();i++) {
 			Pagina pagina=paginas.get(i);
 			if(pagina.getTematica().equals(tematica)) {
 				auxiliar.add(pagina);
 			}
 		}
-		return auxiliar;
+		return auxiliar;*/
+		
+		
+		return paginas
+		.stream()
+		.filter(p->p.getTematica().equals(tematica))
+		.collect(Collectors.toList());
+		
 	}
 	
 }
