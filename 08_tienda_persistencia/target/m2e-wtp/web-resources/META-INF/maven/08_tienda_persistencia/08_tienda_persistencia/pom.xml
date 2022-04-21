@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>08_tienda_persistencia</groupId>
+  <artifactId>08_tienda_persistencia</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>17</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+      </plugin>
+    </plugins>
+  </build>
+  <parent>
+  	<groupId>project.parent</groupId>
+  	<artifactId>project.parent</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <dependencies>
+  	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-orm</artifactId>
+	    <version>${spring.version}</version>	  
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>5.6.8.Final</version>
+	</dependency>
+
+  </dependencies>
+</project>
