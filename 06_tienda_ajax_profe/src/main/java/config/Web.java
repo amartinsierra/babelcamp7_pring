@@ -26,7 +26,7 @@ public class Web implements WebApplicationInitializer {
       FilterRegistration.Dynamic filter=container.addFilter("encoding", new CharacterEncodingFilter());
       filter.setInitParameter("encoding", "UTF-8");
       filter.setInitParameter("forceEncoding", "true");
-      //filter.addMappingForUrlPatterns(DispatcherType., true, "/*")
+      filter.addMappingForUrlPatterns(null,false,"/*");
       
     }
  }

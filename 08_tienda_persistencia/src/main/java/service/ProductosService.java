@@ -22,5 +22,7 @@ public interface ProductosService {
 	
 	Producto buscarProducto(int idProducto);
 	Producto buscarProducto(String nombre);
+	
+	double precioMedioSeccion(String seccion);
 
 }

@@ -33,10 +33,17 @@ public class AlumnosController {
 	public String alta(@ModelAttribute Alumno alumno) {
 		if(!alumnosService.existeAlumno(alumno.getNombre())) {
 			alumnosService.altaAlumno(alumno);
-			return "inicio";
+			return "redirect:/inicio";
 		}else {
-			return "error";
+			return "redirect:/error";
 		}
 	}
+	
+	@GetMapping(value="inicio")
+	public String inicio() {
+		return "inicio";
+	}
+	
+	
 	
 }
